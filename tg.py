@@ -1,3 +1,4 @@
+import os
 import sqlite3
 import requests
 from telegram import Update
@@ -5,8 +6,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 from rich import print
 
 # ================== CONFIG ==================
-TELEGRAM_BOT_TOKEN = "7462299639:AAFRjz0AuJ1m5pUCzNUzCh3xCwyZe8w51yg"
-OPENROUTER_API_KEY = "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"
+TELEGRAM_BOT_TOKEN = os.environ["7462299639:AAFRjz0AuJ1m5pUCzNUzCh3xCwyZe8w51yg"]
+OPENROUTER_API_KEY = os.environ["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"]
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL_NAME = "deepseek/deepseek-chat-v3.1:free"
 # ============================================
